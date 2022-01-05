@@ -49,21 +49,22 @@ while True:
 print(f'{INPUT}{cy} Choose an account to scrape members\n')
 i = 0
 for acc in accs:
+phn = a[0]
     print('checking....')
     i += 1
 ind = int(input(f'\n{INPUT}{cy} Enter choice: '))
 #api_id = accs[ind][0]
 #api_hash = accs[ind][1]
-phone = accs[ind][2]
-client = TelegramClient(f'sessions/{phone}', 3910389 , '86f861352f0ab76a251866059a6adbd6')
+#phone = accs[ind][2]
+client = TelegramClient(f'sessions/{phn}', 3910389 , '86f861352f0ab76a251866059a6adbd6')
 client.connect()
 if not client.is_user_authorized():
     try:
         client.send_code_request(phone)
         code = input(f'{INPUT}{lg} Enter the login code for {w}{phone}{r}: ')
-        client.sign_in(phone, code)
+        client.sign_in(phn, code)
     except PhoneNumberBannedError:
-        print(f'{error}{w}{phone}{r} is banned!{rs}')
+        print(f'{error}{w}{phn}{r} is banned!{rs}')
         print(f'{error}{lg} Run {w}manager.py{lg} to filter them{rs}')
         sys.exit()
 print(f'{info}{lg} Choose an option: ')
