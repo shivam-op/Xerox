@@ -162,6 +162,7 @@ with open('vars.txt', 'wb') as f:
     for ab in to_use:
         pickle.dump(ab, f)
     f.close()
+
 sleep_time = int(input(f'{INPUT}{cy} Enter delay time per request{w}[{lg}0 for None{w}]: {r}'))
 #print(f'{info}{lg} Joining group from {w}{number_of_accs} accounts...')
 #print(f'{grey}-'*50)
@@ -221,6 +222,20 @@ for acc in to_use:
     print(f'{info}{lg} Start: {w}{index}')
     #adding_status = 0
     peer_flood_status = 0
+ input_file = '../data.csv'
+    users = []
+    with open(input_file, encoding='UTF-8') as f:
+        rows = csv.reader(f, delimiter=",", lineterminator="\n")
+        next(rows, None)
+        for row in rows:
+            user = {}
+            user['srno'] = row[0]
+            user['username'] = row[1]
+            user['id'] = int(row[2])
+        #user['access_hash'] = int(row[2])
+            user['name'] = row[3]
+            users.append(user)
+
     for user in members[index:stop]:
         index += 1
         if peer_flood_status == 10:
@@ -228,7 +243,7 @@ for acc in to_use:
             break
         try:
             if choice == 0:
-                c(InviteToChannelRequest(target_details, [user]))
+                c(InviteToChannelRequest(target_details,[user['username']]))
             else:
                 c(AddChatUserRequest(target_details.id, user, 42))
             user_id = user.first_name
