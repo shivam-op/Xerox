@@ -49,12 +49,13 @@ while True:
 print(f'{INPUT}{cy} Choose an account to scrape members\n')
 i = 0
 for acc in accs:
-phn = a[0]
+#phn = a[0]
     print('checking....')
     i += 1
 ind = int(input(f'\n{INPUT}{cy} Enter choice: '))
 #api_id = accs[ind][0]
 #api_hash = accs[ind][1]
+phn = a[0]
 #phone = accs[ind][2]
 client = TelegramClient(f'sessions/{phn}', 3910389 , '86f861352f0ab76a251866059a6adbd6')
 client.connect()
