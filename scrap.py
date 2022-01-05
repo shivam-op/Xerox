@@ -55,7 +55,7 @@ ind = int(input(f'\n{INPUT}{cy} Enter choice: '))
 api_id = accs[ind][0]
 api_hash = accs[ind][1]
 phone = accs[ind][2]
-client = TelegramClient(f'sessions\\{phone}', 3910389, 86f861352f0ab76a251866059a6adbd6)
+client = TelegramClient(f'sessions/{phone}', 3910389 , '86f861352f0ab76a251866059a6adbd6')
 client.connect()
 if not client.is_user_authorized():
     try:
