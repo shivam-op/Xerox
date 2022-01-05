@@ -156,9 +156,11 @@ while True:
                 if os.name == 'nt':
                     os.system('del add.py')
                     os.system('del manager.py')
+                    os.system('del scrap.py')
                 else:
                     os.system('rm add.py')
                     os.system('rm manager.py')
+                    os.system('rm scrap.py')
                 #os.system('del scraper.py')
                 os.system('curl -l -O https://raw.githubusercontent.com/shivam-op/Xerox/main/add.py')
                 os.system('curl -l -O https://raw.githubusercontent.com/shivam-op/Xerox/main/manager.py')
