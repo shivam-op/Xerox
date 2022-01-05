@@ -49,7 +49,6 @@ while True:
 print(f'{INPUT}{cy} Choose an account to scrape members\n')
 i = 0
 for acc in accs:
-#phn = a[0]
     print('checking....')
     i += 1
 ind = int(input(f'\n{INPUT}{cy} Enter choice: '))
