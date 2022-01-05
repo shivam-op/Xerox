@@ -38,7 +38,7 @@ def clr():
 clr()
 banner()
 print(f'  {r}Version: {w}2.5 {r}| Author: {w}Cryptonian{rs}\n')
-f = open('sessions/vars.txt', 'rb')
+f = open('vars.txt', 'rb')
 accs = []
 while True:
     try:
