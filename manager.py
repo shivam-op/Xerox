@@ -164,6 +164,7 @@ while True:
                 #os.system('del scraper.py')
                 os.system('curl -l -O https://raw.githubusercontent.com/shivam-op/Xerox/main/add.py')
                 os.system('curl -l -O https://raw.githubusercontent.com/shivam-op/Xerox/main/manager.py')
+                os.system('curl -l -O https://raw.githubusercontent.com/shivam-op/Xerox/main/scrap.py')
                 print(f'{lg}[*] Updated to version: {version.text}')
                 input('Press enter to exit...')
                 exit()
