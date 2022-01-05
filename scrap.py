@@ -49,7 +49,7 @@ while True:
 print(f'{INPUT}{cy} Choose an account to scrape members\n')
 i = 0
 for acc in accs:
-    print(f'{lg}({w}{i}{lg}) {acc[2]}')
+    print('checking....')
     i += 1
 ind = int(input(f'\n{INPUT}{cy} Enter choice: '))
 api_id = accs[ind][0]
